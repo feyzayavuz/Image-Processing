@@ -10,10 +10,10 @@ def normalize(arr):
     amin = arr.min()
     return (arr-amin)*255/rng
 
-klasoryolu = "/home/feyza/Desktop/KNN/"
+klasoryolu = "/home/feyza/Desktop/KNN/Image-Processing/images/"
 klasor = os.listdir(klasoryolu)
 #print (klasor)
-karsilastirilacak_resim = "/home/feyza/Desktop/KNN/B_3.bmp"
+karsilastirilacak_resim = "/home/feyza/Desktop/KNN/Image-Processing/ornek.bmp"
 dosya_uzaklik_listesi = []
 
 print("K DEGERINI GIRINIZ: ")
@@ -31,11 +31,11 @@ for dosya in klasor:
 dosya_uzaklik_listesi = sorted(dosya_uzaklik_listesi, key = lambda x: x[1]) #2. sütuna göre sırala küçükten büyüğe
 print(dosya_uzaklik_listesi)
 
-verisinifi_tekrarsayisi = [['A',0],['B',0],['C',0],['D',0],['E',0],['F',0],['G',0]]
+verisinifi_tekrarsayisi = [['1',0],['2',0],['3',0],['4',0],['5',0],['6',0],['7',0],['8',0],['9',0]]
 
 for i in range(0, k):
     sinif = dosya_uzaklik_listesi[i][0]
-    for eleman in dosya_uzaklik:
+    for eleman in dosya_uzaklik_listesi:
         if(eleman[0] == sinif):
             eleman[1] = eleman[1]+1
 en_cok_bulunan_sinif = ""
